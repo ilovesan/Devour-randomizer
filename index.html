@@ -22,11 +22,13 @@ button{padding:12px 30px;font-size:18px;background:#222;color:#fff;border:none;b
 <div class="box" id="res"></div>
 
 <script>
-//A选项素材
+//A选项素材 原有4项+新增2项
 let place = ["农舍","精神病院","小镇","居酒屋","屠宰场","庄园","嘉年华"];
 let level = ["简单","普通","困难","梦魇"];
 let hit = ["碰撞","不碰撞"];
 let voice = ["接近语音","非接近语音"];
+let battery = ["电池","无电池"];
+let medical = ["医疗包","无医疗包"];
 
 //B1-B4第一栏天赋
 let t1 = ["无天赋1","急救先锋","攀爬行者","肾上腺素","后勤健将","急速","耐心","快工","无中生有","战地医生","领袖勋章","急行者","环保主义者","压力山大","超载模式","闪避达人"];
@@ -38,8 +40,8 @@ function rnd(arr){
 }
 
 function getResult(){
-    let A1=rnd(place),A2=rnd(level),A3=rnd(hit),A4=rnd(voice);
-    let A=`【A选项】${A1} · ${A2} · ${A3} · ${A4}`;
+    let A1=rnd(place),A2=rnd(level),A3=rnd(hit),A4=rnd(voice),A5=rnd(battery),A6=rnd(medical);
+    let A=`【A选项】${A1} · ${A2} · ${A3} · ${A4} · ${A5} · ${A6}`;
 
     function getB(){
         return `${rnd(t1)} + ${rnd(t2)}`;
